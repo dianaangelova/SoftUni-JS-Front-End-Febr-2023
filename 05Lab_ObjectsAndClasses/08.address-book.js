@@ -5,11 +5,6 @@ function addressBookParser(input) {
         let name = tokens[0];
         let addressNumber = tokens[1];
         addressBook[name] = addressNumber;
-
-        //Ако трябваше да оставя оригинала,а не да замествам
-        // if (!addressBook.hasOwnProperty(name)){
-        //     addressBook.name=addressNumber;
-        // }
     }
 
     let sortedNames = Object.keys(addressBook)
