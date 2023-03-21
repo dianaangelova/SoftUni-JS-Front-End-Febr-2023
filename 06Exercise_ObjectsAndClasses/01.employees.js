@@ -6,14 +6,15 @@ function employeesParser(input) {
     //     employees[name]=personalNumber;
     // }
     //Вместо с for може да редуцирам масива към обект чрез reduce функцията
-    let employees = input.reduce((data, employee) => {
+
+    Object.entries(input.reduce((data, employee) => {
         data[employee] = employee.length;
         return data;
-    }, {});
-    for (const key in employees) {
-        console.log(`Name: ${key} -- Personal Number: ${employees[key]}`);
-    }
+    }, {})).forEach(([employee, length]) => {
+        console.log(`Name: ${employee} -- Personal Number: ${length}`);
+    });
 }
+
 employeesParser([
         'Silas Butler',
         'Adnaan Buckley',
