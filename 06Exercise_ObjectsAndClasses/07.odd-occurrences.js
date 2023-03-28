@@ -4,7 +4,6 @@ function oddOccurrences(input) {
     let array =[];
     for (const word of wordsInInput) {
         let count = wordsInInput.filter((w) => w === word).length;
-        //асоциативен масив
         if (count%2!=0 && !words.hasOwnProperty(word)){
             words[" "+word] = count;
         }
