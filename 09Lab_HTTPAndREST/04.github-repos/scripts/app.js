@@ -3,11 +3,10 @@ function loadRepos() {
     const resultContainer = document.getElementById("res");
     fetch(BASE_URL, {method: 'GET'})
         //response.text() returns new promise<string>
+        //in the future we will use json
         .then((response) => response.text())
         .then((data) => {
-
             resultContainer.textContent = data;
-
         })
         //when working with promises we always need catch block
         .catch((error) => {
