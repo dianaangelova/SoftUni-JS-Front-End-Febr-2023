@@ -21,19 +21,19 @@ if (typeof document !== 'undefined') {
             .then((response) => response.json())
             .then((tasksInfo) => {
 
-                Object.values(tasksInfo).forEach((task) => {
+                Object.values(tasksInfo).forEach(({name, _id}) => {
                         const newLi = document.createElement("li");
 
                         const newSpanTaskName = document.createElement("span");
                         const newBtnRemove = document.createElement("button");
                         const newBtnEdit = document.createElement("button");
 
-                        newSpanTaskName.textContent = `${task.name}`;
+                        newSpanTaskName.textContent = `${name}`;
                         newBtnRemove.textContent = "Remove";
                         newBtnEdit.textContent = "Edit";
 
-                        newBtnRemove.id = task._id;
-                        newBtnEdit.id = task._id;
+                        newBtnRemove.id = _id;
+                        newBtnEdit.id = _id;
 
                         ulContainer.appendChild(newLi);
                         newLi.appendChild(newSpanTaskName);
