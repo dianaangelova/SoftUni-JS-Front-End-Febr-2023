@@ -1,4 +1,4 @@
-
+//
 if (typeof document !== 'undefined') {
     function attachEvents() {
         const BASE_URL = "http://localhost:3030/jsonstore/tasks/";
